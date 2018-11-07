@@ -5,4 +5,8 @@
 
 package id.hasaneljabir.footballclub.Model
 
-data class FootballClubItem (val logo: Int?, val name: String?, val description: String?)
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+data class FootballClubItem (val logo: Int, val name: String, val description: String): Parcelable
