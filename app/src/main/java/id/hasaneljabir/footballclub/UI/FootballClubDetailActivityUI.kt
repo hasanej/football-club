@@ -4,16 +4,13 @@ import android.os.Build
 import android.support.annotation.RequiresApi
 import android.view.Gravity
 import android.widget.LinearLayout
+import com.squareup.picasso.Picasso
 import id.hasaneljabir.footballclub.Activity.FootballClubDetailActivity
+import id.hasaneljabir.footballclub.Model.FootballClubItem
 import org.jetbrains.anko.*
 
-class FootballClubDetailActivityUI : AnkoComponent<FootballClubDetailActivity> {
-    companion object {
-        val imgFootballClubLogo = 1
-        val txtFootballClubName = 2
-        val txtFootballClubDescription = 2
-        val intentExtra = "intent_extra"
-    }
+class FootballClubDetailActivityUI(var intentExtra: FootballClubItem) : AnkoComponent<FootballClubDetailActivity> {
+    companion object { val intentExtra = "intent_extra" }
 
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     override fun createView(ui: AnkoContext<FootballClubDetailActivity>) = with(ui){
@@ -22,20 +19,20 @@ class FootballClubDetailActivityUI : AnkoComponent<FootballClubDetailActivity> {
             lparams(matchParent, matchParent)
 
             imageView {
-                id = imgFootballClubLogo
+                Picasso.get().load(intentExtra.logo).into(this)
                 padding = dip(10)
                 this@linearLayout.gravity = Gravity.CENTER_HORIZONTAL
-            }.lparams(dip(80), dip(80))
+            }.lparams(dip(150), dip(150))
 
             textView {
-                id = txtFootballClubName
-                textSize = sp(10).toFloat()
+                text = intentExtra.name
+                textSize = dip(8).toFloat()
                 gravity = Gravity.CENTER_HORIZONTAL
                 padding = dip(10)
             }
 
             textView {
-                id = txtFootballClubDescription
+                text = intentExtra.description
                 padding = dip(10)
             }
 
