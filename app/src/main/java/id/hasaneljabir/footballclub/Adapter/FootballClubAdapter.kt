@@ -13,7 +13,6 @@ import android.widget.TextView
 import com.squareup.picasso.Picasso
 import id.hasaneljabir.footballclub.Model.FootballClubItem
 import id.hasaneljabir.footballclub.UI.FootballClubItemUI
-import kotlinx.android.extensions.LayoutContainer
 import org.jetbrains.anko.AnkoContext
 
 class FootballClubAdapter(private val footballClubItem: List<FootballClubItem>, private val listener: (FootballClubItem) -> Unit)
@@ -28,7 +27,7 @@ class FootballClubAdapter(private val footballClubItem: List<FootballClubItem>, 
 
     override fun getItemCount(): Int = footballClubItem.size
 
-    class ViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var imgFootballClubLogo : ImageView
         var txtFootballClubName : TextView
 
