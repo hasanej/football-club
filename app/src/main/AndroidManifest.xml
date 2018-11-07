@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="id.hasaneljabir.footbalclub">
+    package="id.hasaneljabir.footballclub">
 
     <application
         android:allowBackup="true"
@@ -10,14 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".Activity.FootbalClubListActivity">
+        <activity android:name="id.hasaneljabir.footballclub.Activity.FootballClubListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <activity android:name=".Activity.FootbalClubDetailActivity"></activity>
+        <activity android:name="id.hasaneljabir.footballclub.Activity.FootballClubDetailActivity"></activity>
 
     </application>
 
