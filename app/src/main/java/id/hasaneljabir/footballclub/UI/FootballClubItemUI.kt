@@ -12,8 +12,8 @@ import org.jetbrains.anko.*
 
 class FootballClubItemUI : AnkoComponent<ViewGroup> {
     companion object {
-        val idLogo = 1
-        val idName = 2
+        val imgFootballClubLogo = 1
+        val txtFootballClubName = 2
     }
 
     override fun createView(ui: AnkoContext<ViewGroup>) = with(ui) {
@@ -23,12 +23,11 @@ class FootballClubItemUI : AnkoComponent<ViewGroup> {
             padding = dip(16)
 
             imageView {
-                id = idLogo
+                id = imgFootballClubLogo
             }.lparams(dip(50), dip(50))
 
             textView {
-                id = idName
-                text = "Coba FC"
+                id = txtFootballClubName
             }.lparams(matchParent, wrapContent) {
                 margin = dip(10)
                 gravity = Gravity.CENTER_VERTICAL
