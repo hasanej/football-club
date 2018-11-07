@@ -18,7 +18,6 @@ import org.jetbrains.anko.AnkoContext
 
 class FootballClubAdapter(private val footballClubItem: List<FootballClubItem>, private val listener: (FootballClubItem) -> Unit)
     : RecyclerView.Adapter<FootballClubAdapter.ViewHolder>() {
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(FootballClubItemUI().createView(AnkoContext.create(parent.context, parent)))
     }
@@ -45,5 +44,4 @@ class FootballClubAdapter(private val footballClubItem: List<FootballClubItem>, 
             itemView.setOnClickListener { listener(footballClubItem) }
         }
     }
-
 }
