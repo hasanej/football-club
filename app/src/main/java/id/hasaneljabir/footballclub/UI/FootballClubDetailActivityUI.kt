@@ -1,3 +1,8 @@
+/*
+ * Submission 1 - Kotlin Android Developer Expert
+ * Developer : Hasan El Jabir
+ */
+
 package id.hasaneljabir.footballclub.UI
 
 import android.os.Build
