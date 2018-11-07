@@ -1,4 +1,4 @@
-package id.hasaneljabir.footbalclub
+package id.hasaneljabir.footballclub
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

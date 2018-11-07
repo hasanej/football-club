@@ -1,4 +1,4 @@
-package id.hasaneljabir.footbalclub
+package id.hasaneljabir.footballclub
 
 import org.junit.Test
 
